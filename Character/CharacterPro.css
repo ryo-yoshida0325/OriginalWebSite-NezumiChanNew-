@@ -1,0 +1,112 @@
+.top{
+    width:100%;
+    height:100%;
+    background-color:rgba(42, 12, 175, 0.795);
+    position:relative;
+    z-index:0;
+    background-image: url(./Image/backimg/1.bmp);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    transition: 1500ms;
+    font-family:'Franklin Gothic Medium';
+}
+.topbar{
+    position: absolute;
+    z-index: 10;
+    width:100%;
+    height:10%;
+    background-color: gray;
+    color:white;
+    opacity:0.9;
+}
+.barwrapper{
+    margin-left:40;
+}
+.barwrapper a{
+    float:left;
+    padding:15 20 0 20;
+    font-size:30px;
+    height:77%;
+}
+.barwrapper a:hover{
+    background-color:rgba(255, 255, 255, 0.699);
+    transition: 0.5s;
+}
+.characterBox{
+    position:absolute;
+    z-index:1;
+    background-color:rgba(36, 16, 150, 0.555);
+    width:80%;
+    height:80%;
+    right:0;
+    left:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.characters{
+    position:absolute;
+    z-index:2;
+    background-color:rgba(0, 0, 0, 0.226);;
+    height:50%;
+    width:90%;
+    right:0;
+    left:0;
+    bottom:225px;
+    margin:auto;
+    text-align: center;
+}
+.nezumi,.usagi,.inu,.neko{
+    opacity:0.3;
+    width:10%;
+    height:80%;
+    margin:20 5 20 5;
+    display: inline-block;
+}
+.nezumi3,.usagi3,.inu3,.neko3{
+    width:10%;
+    height:80%;
+    background-color: black;
+    margin:20 5 20 5;
+    display: inline-block;
+    transition: 1s;
+    -webkit-transition: 1s;  
+}
+.characterS img {
+    height:100%;
+    width:100%;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+img:hover{
+    opacity: 1.0;
+    transition: 0.5s;
+}
+video{
+    height:100%;
+    width:100%;    
+}
+.produceBox{
+    position:absolute;
+    z-index: 2;
+    width:60%;
+    height:40%;
+    background-color: rgba(0, 0, 0, 0.226);;
+    left:0;
+    bottom:0;
+    margin:10 10 10 50;
+    font-size:15px;
+    color:white;
+}
+.modelCase{
+    position:absolute;
+    z-index: 2;
+    background-color: rgba(4, 3, 7, 0.849);
+    width:25%;
+    height :40%;
+    right:0;
+    bottom:0;
+    margin:10 50 10 10;
+    font-size:10px;
+}

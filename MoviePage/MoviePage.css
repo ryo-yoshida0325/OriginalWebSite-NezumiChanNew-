@@ -1,0 +1,76 @@
+.top{
+    background-color: rgba(42, 12, 175, 0.795);
+    position:relative;
+    width:100%;
+    height: 100%;
+    z-index:0;
+}
+.backImg{
+    width:100%;
+    height: 100%;
+    background-image: url(../Character/Image/backimg/syugo.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    position:fixed;
+    z-index:1;
+}
+.topbar{
+    position: absolute;
+    position:fixed;
+    z-index: 10;
+    width:100%;
+    height:10%;
+    right:0;
+    left:0;
+    top:0;
+    margin:auto;
+    background-color: gray;
+    color:white;
+    opacity:0.9;
+}
+.barwrapper{
+    margin-left:40;
+}
+.barwrapper a{
+    float:left;
+    padding:15 20 0 20;
+    font-size:30px;
+    height:77%;
+}
+.barwrapper a:hover{
+    background-color:rgba(255, 255, 255, 0.699);
+    transition: 0.5s;
+}
+.base{
+    position:absolute;
+    width:80%;
+    height:3000px;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 2;
+    right:0;
+    left:0;
+    top:0;
+    margin:auto;
+}
+.underbar{
+    position: absolute;
+    position:fixed;
+    width:100%;
+    height:10%;
+    z-index: 10;
+    opacity: 0.9;
+    bottom:0;
+    margin:auto;
+    background-color: gray;
+}
+.texPosit{
+    position: relative;
+}
+.texPosit a{
+    position: absolute;
+    right:16;
+    bottom:-70;
+    color:white;
+}

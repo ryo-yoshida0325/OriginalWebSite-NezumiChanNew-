@@ -1,3 +1,11 @@
+@font-face{
+    font-family: "Midashi";
+    src:url("../Font/Halogen/Halogen/HalogenbyPixelSurplus-Regular.otf");
+}
+@font-face{
+    font-family:'MyFont';
+    src:url("../Font/misaki_ttf_2019-10-19/misaki_gothic_2nd.ttf");
+}
 .top{
     background-color: rgba(42, 12, 175, 0.795);
     position:relative;
@@ -41,7 +49,7 @@
     align-items: center;
 }
 .barcont a{
-
+    font-family: Midashi;
 }
 .barcont:hover{
     background-color:rgba(255, 255, 255, 0.699);

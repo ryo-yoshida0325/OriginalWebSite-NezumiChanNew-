@@ -23,20 +23,26 @@
 .barwrapper{
     margin-left:40;
 }
-.barwrapper a{
+.barcont{
     float:left;
-    padding:15 20 0 20;
+    padding:0 20 0 20;
     font-size:30px;
-    height:77%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
-.barwrapper a:hover{
+.barwrapper a{
+
+}
+.barcont:hover{
     background-color:rgba(255, 255, 255, 0.699);
     transition: 0.5s;
 }
 .characterBox{
     position:absolute;
     z-index:1;
-    background-color:rgba(36, 16, 150, 0.555);
+    background-color:rgba(15, 13, 24, 0.555);
     width:80%;
     height:80%;
     right:0;
@@ -45,7 +51,7 @@
     bottom:0;
     margin:auto;
 }
-.characters{
+.characterS{
     position:absolute;
     z-index:2;
     background-color:rgba(0, 0, 0, 0.226);;
@@ -53,7 +59,6 @@
     width:90%;
     right:0;
     left:0;
-    bottom:225px;
     margin:auto;
     text-align: center;
 }
@@ -95,7 +100,7 @@ video{
     background-color: rgba(0, 0, 0, 0.226);;
     left:0;
     bottom:0;
-    margin:10 10 10 50;
+    margin:auto;
     font-size:15px;
     color:white;
 }
@@ -109,4 +114,10 @@ video{
     bottom:0;
     margin:10 50 10 10;
     font-size:10px;
+}
+.ukagaka{
+    position: absolute;
+    z-index: 5;
+    bottom:0;
+    left:0;
 }

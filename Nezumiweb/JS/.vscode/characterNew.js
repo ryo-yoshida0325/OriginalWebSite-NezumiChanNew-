@@ -91,6 +91,7 @@ window.onload=()=>{
     const imgURL = "./Image/backimg/"
     const chBackImg =()=>{
         const result = Math.floor(Math.random()*23);
+        if (result==0){chBackImg()};
         setimg(result);
         setTimeout(chBackImg,5000);
     };

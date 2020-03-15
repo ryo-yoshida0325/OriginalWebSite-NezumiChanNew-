@@ -61,7 +61,11 @@
     opacity:1;
     font-size: 25px;
 }
-
+.conts:hover{
+    background-color: white;
+    color:black;
+    transition: 0.5s;
+}
 .textWrapper{
     display:inline-block;
     position:absolute;
@@ -74,4 +78,10 @@
     display:block;
     font-size: 30px;
     color:rgba(207, 204, 223, 0.61);
+}
+.ukagaka{
+    position: absolute;
+    z-index: 5;
+    bottom:0;
+    right:30;
 }

@@ -127,7 +127,31 @@ const changeVideo = ()=>{
 
 changeVideo();
 
+let fukidashiCh = document.getElementsByClassName("fukidashiB")[0];
+const serifArray=["こんにちは！ わたしのこと は ねずみちゃん と よんで くださいね！","やめて！　たいした　ことない　サイトだな　とか　いわないで！;;","HAI?","NANDESUKA?","YAMETE KUDASAI"];
+//const spSerif;const spSerifAr;
 
+fukidashiCh.className="fukidashi";
+let fukidashiChAn = document.getElementsByClassName("fukidashi")[0];
+fukidashiChAn.innerHTML=serifArray[0];
+let chFlag=0;
+setTimeout(() => {
+    fukidashiChAn.innerHTML="";
+    fukidashiChAn.className="fukidashiB";
+    fukidashiCh = document.getElementsByClassName("fukidashiB")[0];
+    chFlag=1;
+}, 10000);
 
-
-};
+const socSerif=()=>{
+    if (chFlag==1){
+        setTimeout(() => {
+            fukidashiCh.className="fukidashi";
+            fukidashiChAn = document.getElementsByClassName("fukidashi")[0];
+            fukidashiChAn.innerHTML=serifArray[1];
+        }, 2000);
+    }else{
+        socSerif();
+    }
+}
+setTimeout(socSerif,10000);
+}

@@ -100,7 +100,7 @@
     text-align: center;
 }
 .ukagaka{
-
+    cursor: pointer;
 }
 .fukidashi{
     background-color: white;
@@ -109,7 +109,6 @@
     top:40;
     display: inline-block;
     right:50%;
-    border-radius: 10px;
     transition: 400ms;
     font-family: Myfont;
     font-size: 20px;
@@ -122,11 +121,34 @@
     padding-left:5px;
     display: inline-block;
     border-left:solid 60px white;
-    border-top:solid 10px transparent;
+    border-top:solid 5px transparent;
 }
 .fukidashi a{
     display: inline-block;
     padding:12px
 }
-
+.gun1{
+    position: absolute;
+    top:80;
+    right:150;
+    z-index: 10;
+    width:300;
+}
+.gun2{
+    position: absolute;
+    top:50;
+    z-index:11;
+    right:500;
+    width:500;
+}
+.gun3{
+    position: absolute;
+    top:300;
+    right:150;
+    z-index: 12;
+    width:400;
+}
+.gun1,.gun2,.gun3{
+    visibility:hidden;
+}
 

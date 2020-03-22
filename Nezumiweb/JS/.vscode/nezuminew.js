@@ -128,30 +128,62 @@ const changeVideo = ()=>{
 changeVideo();
 
 let fukidashiCh = document.getElementsByClassName("fukidashiB")[0];
+const ukagaka = document.getElementsByClassName("ukagaka");
+const SE = document.getElementsByClassName("SEs")[0];
 const serifArray=["こんにちは！ わたしのこと は ねずみちゃん と よんで くださいね！","やめて！　たいした　ことない　サイトだな　とか　いわないで！;;","HAI?","NANDESUKA?","YAMETE KUDASAI"];
+const touchArray=["いたっ","ちょっ、なんですか","やめて！小突かないで！","やめっ、、、ちょっと　ほんとうに、、","ほんとに　おこりますよ！","やー！","、、、、、"];
 //const spSerif;const spSerifAr;
 
 fukidashiCh.className="fukidashi";
-let fukidashiChAn = document.getElementsByClassName("fukidashi")[0];
-fukidashiChAn.innerHTML=serifArray[0];
+let fukidashiChAn = document.getElementsByClassName("fukidashi");
+fukidashiChAn[0].innerHTML=serifArray[0];
 let chFlag=0;
-setTimeout(() => {
-    fukidashiChAn.innerHTML="";
-    fukidashiChAn.className="fukidashiB";
+const hideSerif =(pre) => {
+    fukidashiChAn[0].innerHTML="";
+    fukidashiChAn[0].className="fukidashiB";
     fukidashiCh = document.getElementsByClassName("fukidashiB")[0];
     chFlag=1;
-}, 10000);
-
-const socSerif=()=>{
+};
+let opFlag=0;
+const socSerif=(fukidashi,fukidashiArr,i,times)=>{
     if (chFlag==1){
         setTimeout(() => {
-            fukidashiCh.className="fukidashi";
-            fukidashiChAn = document.getElementsByClassName("fukidashi")[0];
-            fukidashiChAn.innerHTML=serifArray[1];
-        }, 2000);
+            fukidashiCh.className=fukidashi;
+            fukidashiChAn = document.getElementsByClassName(fukidashi);
+            fukidashiChAn[0].innerHTML=fukidashiArr[i];
+            opFlag=1
+        }, times);
     }else{
         socSerif();
     }
 }
-setTimeout(socSerif,10000);
+setTimeout(hideSerif,8000,"");
+setTimeout(socSerif,10000,"fukidashi",serifArray,1,2000);
+let plus = 0;let lage =0;let fire=0;
+ukagaka[0].onclick=()=>{
+    if(opFlag==1){
+        hideSerif("");
+        if(plus>5){
+            plus=5;
+            lage++;
+            if(lage>6){
+                SE.src="SE/machinegun-firing1.mp3";
+                for(let i=1;i<4;i++){
+                    let getguns =document.getElementsByClassName("gun"+i)[0]
+                    getguns.style.visibility="visible";
+                    fire=1;
+                };
+            };
+            if(lage>5&&fire==0){
+                ukagaka[0].src="Character/Image/nezumiGun.png";
+                SE.src="SE/handgun-ready1.mp3";
+            };
+        };//5回以上クリックされた場合の処理
+        plus++;
+        socSerif("fukidashi",touchArray,plus,100);
+    };
+    
+};
+
+
 }
